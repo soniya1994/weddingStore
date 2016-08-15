@@ -7,14 +7,82 @@
   <link rel="stylesheet" href="resources/css/bootstrap.min.css">
   <script src="resources/js/jquery.min.js"></script>
   <script src="resources/js/bootstrap.min.js"></script>
-  <!-- Bootstrap Core CSS -->
+   <script>
+  $('.multi-item-carousel').carousel({
+	  interval: false
+	});
+
+	
+	$('.multi-item-carousel .item').each(function(){
+	  var next = $(this).next();
+	  if (!next.length) {
+	    next = $(this).siblings(':first');
+	  }
+	  next.children(':first-child').clone().appendTo($(this));
+	  
+	  if (next.next().length>0) {
+	    next.next().children(':first-child').clone().appendTo($(this));
+	  } else {
+	  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+	  }
+	});</script>
+   <!-- Bootstrap Core CSS -->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom CSS -->
-    <link href="resources/css/3-col-portfolio.css" rel="stylesheet">
+
 </head>
-  <style>
+  <style>body{
   
-	body {
+	.multi-item-carousel{
+  .carousel-inner{
+    > .item{
+      transition: 500ms ease-in-out left;
+    }
+    .active{
+      &.left{
+        left:-33%;
+      }
+      &.right{
+        left:33%;
+      }
+    }
+    .next{
+      left: 33%;
+    }
+    .prev{
+      left: -33%;
+    }
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      > .item{
+        // use your favourite prefixer here
+        transition: 500ms ease-in-out all;
+        backface-visibility: visible;
+        transform: none!important;
+      }
+    }
+  }
+  .carouse-control{
+    &.left, &.right{
+      background-image: none;
+    }
+  }
+}}
+
+// non-related styling:
+body{
+  background: #333;
+  color: #ddd;
+}
+h1{
+  color: white;
+  font-size: 2.25em;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
+}
+  body 
+	{
       font: 400 15px/1.8 Lato, sans-serif;
       color: #777;
   }
@@ -154,30 +222,27 @@
   textarea {
       resize: none;
   }
+ 
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-<nav class="navbar navbar-default navbar-fixed-top">
-<div class="container-fluid">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
+
 
       </button>
-     <center> <h2>WEDDING STORE</h2></center>
+     <center><h2>WEDDING STORE</h2></center>
     <ul class="nav nav-pills">
   <li class="active"><a href="/">HOME</a></li>
   <li><a href="product">WEDDING COLLECTION</a></li>
   <li><a href="aboutus">ABOUT US</a></li>
    <li><a href="login1">LOGIN</a></li>
+   <li><a href="signup">NEW USER</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+   
 </ul>
     </div>
   </div>
-</nav></br>
-
+</nav>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -186,7 +251,6 @@
       <li data-target="#myCarousel" data-slide-to="2"></li>
       <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
-
    
     <div class="carousel-inner" role="listbox">
       <div class="item active">
@@ -226,81 +290,26 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-</div>
-
-              <center>  <h1>Welcome to our site</h1></center>
-           
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
-      <li data-target="#myCarousel" data-slide-to="4"></li>
-      <li data-target="#myCarousel" data-slide-to="5"></li>
-      <li data-target="#myCarousel" data-slide-to="6"></li>
-      <li data-target="#myCarousel" data-slide-to="7"></li>
-      <li data-target="#myCarousel" data-slide-to="8"></li>
-      
-    </ol>
-     <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="resources/images/ps.jpg" alt="Los Angeles" width="50" height="50">
-        <div class="carousel-caption">
-      <p>Wedding Saree</p> </div>
-       </div>
-             <div class="item">
-        <img src="resources/images/sa.jpg" alt="Los Angeles" width="50" height="50">
-        <div class="carousel-caption">
-      <p>silk Saree</p> </div>
-       </div>  <div class="item">
-        <img src="resources/images/p1.jpg" alt="Los Angeles" width="250" height="250">
-        <div class="carousel-caption">
-      <p>Lehenga</p> </div>
-       </div> 
-            <div class="item">
-        <img src="resources/images/je1.jpg" alt="Los Angeles" width="250" height="250">
-        <div class="carousel-caption">
-      <p>Jewellery</p> </div>
-       </div>    
-          
- <div class="item">
-        <img src="resources/images/p2.jpg" alt="Los Angeles" width="250" height="250">
-        <div class="carousel-caption">
-      <p>Gujarat Silk</p> </div>
-       </div>  
-        <div class="item">
-        <img src="resources/images/silk.jpg" alt="Los Angeles" width="250" height="250">
-        <div class="carousel-caption">
-      <p>Kerala Silk</p> </div>
-       </div>  
-        <div class="item">
-        <img src="resources/images/brid.jpg" alt="Los Angeles" width="250" height="250">
-        <div class="carousel-caption">
-      <p>Bridal</p> </div>
-       </div>  
-         <div class="item">
-        <img src="resources/images/je.jpg" alt="Los Angeles" width="250" height="250">
-        <div class="carousel-caption">
-      <p>Wedding Ring</p> </div>
-       </div> 
-        <div class="item">
-        <img src="resources/images/men.jpg" alt="Los Angeles" width="250" height="250">
-        <div class="carousel-caption">
-      <p>Boys Wedding Dress</p> </div>
-       </div>   
-                 <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-</div>
-</div>
+</div> 
+  
+    <div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="container">
+    <div class="jumbotron">
+      <img src="resources/images/le1.jpg" alt="New York" width="300" height="500">
+       <img src="resources/images/bridal2.jpg" alt="New York" width="300" height="500">
+        <img src="resources/images/bridal3.jpg" alt="New York" width="300" height="500">
+         <img src="resources/images/bridal4.jpg" alt="New York" width="300" height="500">
+          <img src="resources/images/bridal5.jpg" alt="New York" width="300" height="500">
+           <img src="resources/images/bridal6.jpg" alt="New York" width="300" height="500">
+            <img src="resources/images/bridal7.jpg" alt="New York" width="300" height="500">
+             <img src="resources/images/brid.jpg" alt="New York" width="300" height="500">
+              <img src="resources/images/bridal.jpg" alt="New York" width="300" height="500">
+   
+    
+    </div>
+  </div>
+  </div>
 </body>
 </html>
 

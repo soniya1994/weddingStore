@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+@SuppressWarnings("unused")
 @Controller
 
 public class LoginController {
@@ -14,12 +15,22 @@ public class LoginController {
 	ModelAndView m=new ModelAndView();
 	
 
+	@RequestMapping(value="/",method=RequestMethod.GET)
+	public ModelAndView gohome(){
+		System.out.println("-----home Controller-----");
+		m.setViewName("index");
+		return m;
+	}
 	@RequestMapping(value="index",method=RequestMethod.GET)
 	public ModelAndView index(){
 		System.out.println("-----Index Controller-----");
 		m.setViewName("index");
 		return m;
 	}
+	
+	
+	
+	
 
 @RequestMapping(value="aboutus",method=RequestMethod.GET)
 public ModelAndView aboutus()

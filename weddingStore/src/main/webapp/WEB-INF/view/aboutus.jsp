@@ -10,7 +10,7 @@
   <!-- Bootstrap Core CSS -->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom CSS -->
-    <link href="resources/css/3-col-portfolio.css" rel="stylesheet">
+   
 </head>
   <style>
   
@@ -157,22 +157,18 @@
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-<nav class="navbar navbar-default navbar-fixed-top">
-<div class="container-fluid">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
 
-      </button>
+
+     
      <center> <h2>WEDDING STORE</h2></center>
     <ul class="nav nav-pills">
-  <li class="active"><a href="index">HOME</a></li>
+  <li><a href="index">HOME</a></li>
   <li><a href="product">WEDDING COLLECTION</a></li>
-  <li><a href="aboutus">ABOUT US</a></li>
+  <li class="active"><a href="aboutus">ABOUT US</a></li>
  
    <li><a href="login1">LOGIN</a></li>
+   <li><a href="signup">NEW USER</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
 
     </div>

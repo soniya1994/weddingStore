@@ -7,8 +7,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="resources/css/bootstrap.min.css">
-  <link href="http://font.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="http://font.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="resources/js/jquery.min.js"></script>
   <script src="resources/js/bootstrap.min.js"></script>
   <script>$(function() {
@@ -185,7 +183,7 @@ input::-webkit-input-placeholder {
 }
    body
 {
-    background: url('resources/images/bg.jpg') fixed;
+    background: url('resources/images/j.jpg') fixed;
     background-size: cover;
     padding: 0;
     margin: 0;
@@ -382,22 +380,18 @@ input::-webkit-input-placeholder {
   </style>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-<nav class="navbar navbar-default navbar-fixed-top">
-<div class="container-fluid">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
+
 
       </button>
      <center> <h2>WEDDING STORE</h2></center>
     <ul class="nav nav-pills">
-  <li class="active"><a href="index">HOME</a></li>
+  <li><a href="index">HOME</a></li>
   <li><a href="product">WEDDING COLLECTION</a></li>
   <li><a href="aboutus">ABOUT US</a></li>
 
    <li><a href="login1">LOGIN</a></li>
+   <li class="active"><a href="signup">NEW USER</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
 
     </div>

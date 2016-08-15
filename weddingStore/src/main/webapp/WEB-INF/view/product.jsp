@@ -10,7 +10,7 @@
   <!-- Bootstrap Core CSS -->
     <link href="resources/css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom CSS -->
-    <link href="resources/css/3-col-portfolio.css" rel="stylesheet">
+   
 </head>
   <style>
   
@@ -157,28 +157,23 @@
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-<nav class="navbar navbar-default navbar-fixed-top">
-<div class="container-fluid">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
+
 
       </button>
      <center> <h2>WEDDING STORE</h2></center>
     <ul class="nav nav-pills">
-  <li class="active"><a href="index">HOME</a></li>
-  <li><a href="product">WEDDING COLLECTION</a></li>
+  <li><a href="index">HOME</a></li>
+  <li class="active"><a href="product">WEDDING COLLECTION</a></li>
   <li><a href="aboutus">ABOUT US</a></li>
  
    <li><a href="login1">LOGIN</a></li>
+   <li><a href="signup">NEW USER</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-
+</ul>
     </div>
   </div>
-</nav></br>
-
+</nav><br>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -205,129 +200,42 @@
                                 <span class="glyphicon glyphicon-chevron-right"></span>
                             </a>
                         </div>
-                    
+ <div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="container">
+    <div class="jumbotron">
+      <img src="resources/images/bridal2.jpg" alt="New York" width="250" height="400">
+       <h3>RS:4000</h3>
+        <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a> </p>
+  
 
-                <div class="row">
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                     <div class="item active">
-                                    <img class="slide-image" src="resources/images/je1.jpg" alt="">
-                                </div>
-                                                   <div class="caption">
-                                <h4 class="pull-right">RS:2000</h4>
-                                <h4><a href="#">First Product</a>
-                                </h4>
-                                <p>See more snippets like this online store item at Bootsnipp.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">15 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                         <div class="item active">
-                                    <img class="slide-image" src="resources/images/ks.jpg" alt="">
-                                </div>
-                            <div class="caption">
-                                <h4 class="pull-right">RS:3000</h4>
-                                <h4><a href="#">Second Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">12 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
-                        </div>
-                    
-</div>
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="item active">
-                                    <img class="slide-image" src="resources/images/le1.jpg" alt="">
-                                </div>
-                            <div class="caption">
-                                <h4 class="pull-right">RS:3500</h4>
-                                <h4><a href="#">Third Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">31 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
-                        </div>
-                    
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="item active">
-                                    <img class="slide-image" src="resources/images/p4.jpg" alt="">
-                                </div>
-                            <div class="caption">
-                                <h4 class="pull-right">RS:2500</h4>
-                                <h4><a href="#">Fourth Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">6 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
-                        </div>
-                    
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                         <div class="item active">
-                                    <img class="slide-image" src="resources/images/p5.jpg" alt="">
-                                </div>
-                            <div class="caption">
-                                <h4 class="pull-right">RS:4000</h4>
-                                <h4><a href="#">Fifth Product</a>
-                                </h4>
-                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">18 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
-                        </div>
-           </div>
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
+      <img src="resources/images/bridal3.jpg" alt="New York" width="250" height="300">
+      
+        <h3>RS:4000</h3>
+       
+        <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a> </p>
+ 
+      <img src="resources/images/bridal4.jpg" alt="New York" width="250" height="300">
+      <div class="caption">
+        <h3>RS:3200</h3>
+        <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a> </p>
+   
+      <img src="resources/images/bridal5.jpg" alt="New York" width="250" height="300">
+      
+        <h3>RS:2000</h3>
+        <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a> </p>
+      <img src="resources/images/bridal6.jpg" alt="New York" width="250" height="300">
+      
+        <h3>RS:7000</h3>
+        <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a> </p>
+      <img src="resources/images/bridal7.jpg" alt="New York" width="250" height="300">
+      
+        <h3>RS:6000</h3>
+        <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a> </p>
+      </div>
+    </div>
+    </div>
+   </div>
+   </div> 
 </body>
-
 </html>
