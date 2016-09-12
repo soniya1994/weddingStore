@@ -30,5 +30,5 @@ public class Supplier {
 	public void setPhonenumber(String phonenumber) {
 		this.phonenumber = phonenumber;
 	}
-
+	
 }

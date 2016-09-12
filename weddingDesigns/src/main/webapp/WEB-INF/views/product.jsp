@@ -233,6 +233,8 @@
    <li><a href="login1">LOGIN</a></li>
    <li><a href="signup">NEW USER</a></li>
    <li><a href="productinfo">PRODUCT DETAILS</a></li>
+   <li><a href="loginadmin">Admin Access Page</a></li>
+   
     <li><a href="cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
 

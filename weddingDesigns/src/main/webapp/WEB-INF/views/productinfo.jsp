@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="<spring:url value="resources/css/bootstrap.min.css"/>">
   <script src="<spring:url value="resources/js/jquery.min.js"/>"></script>
   <script src="<spring:url value="resources/js/bootstrap.min.js"/>"></script>
+  <script src="<spring:url value="resources/js/angular.min.js"/>"></script>
   <!-- Bootstrap Core CSS -->
     <link href="<spring:url value="resources/css/bootstrap.min.css"/>" rel="stylesheet">
 <!-- Custom CSS -->
@@ -159,7 +160,7 @@
   }
   </style>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body ng-app = "appSearch" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
 
      
@@ -174,6 +175,8 @@
    <li><a href="login1">LOGIN</a></li>
    <li><a href="signup">NEW USER</a></li>
 <li class="active"><a href="productinfo">PRODUCT DETAILS</a></li>
+<li><a href="loginadmin">Admin Access Page</a></li>
+
 
     <li><a href="cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
@@ -197,7 +200,7 @@ th {
 	<input type = "text" placeholder = "Search" id = "serachBar" ng-model = "search" size = "22">
 </div>
 <br>
-<div  ng-controller = "ctrlSearch" class="table-responsive" ng-init = "x=0">
+<div  ng-controller = "ctrlSearch" class="table-responsive">
 	<table class = "table">
 	<thead>
 		<tr>
@@ -206,7 +209,6 @@ th {
 			<th>Price</th>
 			<th>Image</th>
 			<th>Action</th>
-			<th>ProductId</th>
 		</tr>
 	</thead>
 	<tbody>	
@@ -214,266 +216,44 @@ th {
 			<td>{{product.productn}}</td>
 			<td>{{product.description}}</td>
 			<td>{{product.price}}</td>
-			<td><img class="mySlides" src="<spring:url value="resources/images/saree.jpg"/>" align="left" width=100 height=150></th>
+			<td><img src = {{product.image[1]}} align="left" width=100 height=150></td>
 
-			<td><input type = "button" data-toggle = "modal" data-target = "#myModal" class = "btn-primary" ng-click = "" value = "View"></td>
-			<td>{{product.id}}</td>
-		</tr>
-	</tbody>
-	</table>
-	<div class = "modal fade" id = "myModal" role = "dialog">
-		<div class = "modal-dialog">
-			<div class = "modal-content">
-				<div class = "modal-header">
-					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
-					<h4 class = "modal-title">{{products[a].productn}}</h4>
-				</div>
-				<div class = "modal-body">
-					<p>{{products[a].description}}</p>
-					<th><img class="mySlides" src="<spring:url value="resources/images/saree.jpg"/>" align="left" width=100 height=150></th>
-
-				</div>
-				<div class = "modal-footer">
-					<button type = "button" class = "btn btn-danger" data-dismiss = "modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<table class = "table">
-<thread>
-<tbody>	
-		<tr ng-repeat = "product in products | filter:search"  ng-init = "">
-			<td>{{product.productn}}</td>
-			<td>{{product.description}}</td>
-			<td>{{product.price}}</td>
-			<td><img class="mySlides" src="<spring:url value="resources/images/lehe.jpg"/>" align="left" width=100 height=150></th>
-
-
-			<td><input type = "button" data-toggle = "modal" data-target = "#myModal" class = "btn-primary" ng-click = "" value = "View"></td>
-			<td>{{product.id}}</td>
-		</tr>
-	</tbody>
-	</table>
-	<div class = "modal fade" id = "myModal" role = "dialog">
-		<div class = "modal-dialog">
-			<div class = "modal-content">
-				<div class = "modal-header">
-					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
-					<h4 class = "modal-title">{{products[a].productn}}</h4>
-				</div>
-				<div class = "modal-body">
-					<p>{{products[a].description}}</p>
-					<center><img class="mySlides" src="<spring:url value="resources/images/lehe.jpg"/>" align="left" width=100 height=150></th>
-</center>
-				</div>
-				<div class = "modal-footer">
-					<button type = "button" class = "btn btn-danger" data-dismiss = "modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</thread>
-<table class = "table">
-
-<tbody>	
-		<tr ng-repeat = "product in products | filter:search"  ng-init = "">
-			<td>{{product.productn}}</td>
-			<td>{{product.description}}</td>
-			<td>{{product.price}}</td>
-			<td><img class="mySlides" src="<spring:url value="resources/images/lehenga.jpg"/>" align="left" width=100 height=150></th>
-
-
-			<td><input type = "button" data-toggle = "modal" data-target = "#myModal" class = "btn-primary" ng-click = "" value = "View"></td>
-			<td>{{product.id}}</td>
-		</tr>
-	</tbody>
-	</table>
-	<div class = "modal fade" id = "myModal" role = "dialog">
-		<div class = "modal-dialog">
-			<div class = "modal-content">
-				<div class = "modal-header">
-					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
-					<h4 class = "modal-title">{{products[a].productn}}</h4>
-				</div>
-				<div class = "modal-body">
-					<p>{{products[a].description}}</p>
-		<th><img class="mySlides" src="<spring:url value="resources/images/lehenga.jpg"/>" align="left" width=100 height=150></th>
-				</div>
-				<div class = "modal-footer">
-					<button type = "button" class = "btn btn-danger" data-dismiss = "modal">Close</button>
-				</div>
-			</div>
-		</div>
+			<td><input type = "button" data-toggle = "modal" data-target = "#myModal" class = "btn-primary" ng-click = "viewFun(product.id)" value = "View"></td>
 	
+		</tr>
+	</tbody>
+	</table>
+	<div class = "modal fade" id = "myModal" role = "dialog">
+		<div class = "modal-dialog">
+			<div class = "modal-content">
+				<div class = "modal-header">
+					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+					<h4 class = "modal-title">{{products[num].productn}}</h4>
+				</div>
+				<div class = "modal-body">
+					<p>{{products[num].description}}</p>
+					<img src = {{products[num].image[0]}} align="left" width=100 height=150>
+				</div>
+				<div class = "modal-footer">
+					<button type = "button" class = "btn btn-danger" data-dismiss = "modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-<table class = "table">
 
-<tbody>	
-		<tr ng-repeat = "product in products | filter:search"  ng-init = "">
-			<td>{{product.productn}}</td>
-			<td>{{product.description}}</td>
-			<td>{{product.price}}</td>
-			<td><img class="mySlides" src="<spring:url value="resources/images/halfsaree.jpg"/>" align="left" width=100 height=150></th>
-
-
-			<td><input type = "button" data-toggle = "modal" data-target = "#myModal" class = "btn-primary" ng-click = "" value = "View"></td>
-			<td>{{product.id}}</td>
-		</tr>
-	</tbody>
-	</table>
-	<div class = "modal fade" id = "myModal" role = "dialog">
-		<div class = "modal-dialog">
-			<div class = "modal-content">
-				<div class = "modal-header">
-					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
-					<h4 class = "modal-title">{{products[a].productn}}</h4>
-				</div>
-				<div class = "modal-body">
-					<p>{{products[a].description}}</p>
-					<th><img class="mySlides" src="<spring:url value="resources/images/halfsaree.jpg"/>" align="left" width=100 height=150></th>
-
-				</div>
-				<div class = "modal-footer">
-					<button type = "button" class = "btn btn-danger" data-dismiss = "modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-<table class = "table">
-
-<tbody>	
-		<tr ng-repeat = "product in products | filter:search"  ng-init = "">
-			<td>{{product.productn}}</td>
-			<td>{{product.description}}</td>
-			<td>{{product.price}}</td>
-			<td><img class="mySlides" src="<spring:url value="resources/images/bridal.jpg"/>" align="left" width=100 height=150></th>
-
-
-			<td><input type = "button" data-toggle = "modal" data-target = "#myModal" class = "btn-primary" ng-click = "" value = "View"></td>
-			<td>{{product.id}}</td>
-		</tr>
-	</tbody>
-	</table>
-	<div class = "modal fade" id = "myModal" role = "dialog">
-		<div class = "modal-dialog">
-			<div class = "modal-content">
-				<div class = "modal-header">
-					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
-					<h4 class = "modal-title">{{products[a].productn}}</h4>
-				</div>
-				<div class = "modal-body">
-					<p>{{products[a].description}}</p>
-					<th><img class="mySlides" src="<spring:url value="resources/images/bridal.jpg"/>" align="left" width=100 height=150></th>
-
-				</div>
-				<div class = "modal-footer">
-					<button type = "button" class = "btn btn-danger" data-dismiss = "modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-<table class = "table">
-
-<tbody>	
-		<tr ng-repeat = "product in products | filter:search"  ng-init = "">
-			<td>{{product.productn}}</td>
-			<td>{{product.description}}</td>
-			<td>{{product.price}}</td>
-			<td><img class="mySlides" src="<spring:url value="resources/images/bridal1.jpg"/>" align="left" width=100 height=150></th>
-
-
-			<td><input type = "button" data-toggle = "modal" data-target = "#myModal" class = "btn-primary" ng-click = "" value = "View"></td>
-			<td>{{product.id}}</td>
-		</tr>
-	</tbody>
-	</table>
-	<div class = "modal fade" id = "myModal" role = "dialog">
-		<div class = "modal-dialog">
-			<div class = "modal-content">
-				<div class = "modal-header">
-					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
-					<h4 class = "modal-title">{{products[a].productn}}</h4>
-				</div>
-				<div class = "modal-body">
-					<p>{{products[a].description}}</p>
-					<th><img class="mySlides" src="<spring:url value="resources/images/bridal1.jpg"/>" align="left" width=100 height=150></th>
-
-				</div>
-				<div class = "modal-footer">
-					<button type = "button" class = "btn btn-danger" data-dismiss = "modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-   <table class = "table">
-
-<tbody>	
-		<tr ng-repeat = "product in products | filter:search"  ng-init = "">
-			<td>{{product.productn}}</td>
-			<td>{{product.description}}</td>
-			<td>{{product.price}}</td>
-			<td><img class="mySlides" src="<spring:url value="resources/images/bridal2.jpg"/>" align="left" width=100 height=150></th>
-
-
-			<td><input type = "button" data-toggle = "modal" data-target = "#myModal" class = "btn-primary" ng-click = "" value = "View"></td>
-			<td>{{product.id}}</td>
-		</tr>
-	</tbody>
-	</table>
-	<div class = "modal fade" id = "myModal" role = "dialog">
-		<div class = "modal-dialog">
-			<div class = "modal-content">
-				<div class = "modal-header">
-					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
-					<h4 class = "modal-title">{{products[a].productn}}</h4>
-				</div>
-				<div class = "modal-body">
-					<p>{{products[a].description}}</p>
-					<th><img class="mySlides" src="<spring:url value="resources/images/bridal2.jpg"/>" align="left" width=100 height=150></th>
-
-				</div>
-				<div class = "modal-footer">
-					<button type = "button" class = "btn btn-danger" data-dismiss = "modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-   <table class = "table">
-
-<tbody>	
-		<tr ng-repeat = "product in products | filter:search"  ng-init = "">
-			<td>{{product.productn}}</td>
-			<td>{{product.description}}</td>
-			<td>{{product.price}}</td>
-			<td><img class="mySlides" src="<spring:url value="resources/images/chudi.jpg"/>" align="left" width=100 height=150></th>
-
-
-			<td><input type = "button" data-toggle = "modal" data-target = "#myModal" class = "btn-primary" ng-click = "" value = "View"></td>
-			<td>{{product.id}}</td>
-		</tr>
-	</tbody>
-	</table>
-	<div class = "modal fade" id = "myModal" role = "dialog">
-		<div class = "modal-dialog">
-			<div class = "modal-content">
-				<div class = "modal-header">
-					<button type = "button" class = "close" data-dismiss = "modal">&times;</button>
-					<h4 class = "modal-title">{{products[a].productn}}</h4>
-				</div>
-				<div class = "modal-body">
-					<p>{{products[a].description}}</p>
-					<th><img class="mySlides" src="<spring:url value="resources/images/chudi.jpg"/>" align="left" width=100 height=150></th>
-
-				</div>
-				<div class = "modal-footer">
-					<button type = "button" class = "btn btn-danger" data-dismiss = "modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
+<script>
+	var app = angular.module('appSearch',[]);
+	app.controller('ctrlSearch',function($scope){
+		$scope.products = [{productn:'SAREE',description:'Unique Collection',price:'Rs. 5,000',image:['resources/images/saree.jpg','resources/images/saree.jpg'],id:0},
+		                   {productn:'BRIDAL',description:'White Silky',price:'Rs. 7,000',image:['resources/images/bridal.jpg','resources/images/bridal.jpg'],id:1},
+		                   {productn:'LEHENGA',description:'Party wear',price:'Rs. 4,900',image:['resources/images/lehe.jpg','resources/images/lehe.jpg'],id:2},
+		                   {productn:'PARTY WEAR',description:'White Cotton',price:'Rs. 6,000',image:['resources/images/bridal2.jpg','resources/images/bridal2.jpg'],id:3}];	
+	$scope.viewFun = function(temp){
+		$scope.num = temp;
+		};
+	});
+</script>
    
 </body>
 </html>

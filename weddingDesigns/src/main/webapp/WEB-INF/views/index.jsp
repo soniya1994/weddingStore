@@ -168,6 +168,8 @@ h1{
    <li><a href="login1">LOGIN</a></li>
    <li><a href="signup">NEW USER</a></li>
    <li><a href="productinfo">PRODUCT DETAILS</a></li>
+   <li><a href="loginadmin">Admin Access Page</a></li>
+   
     <li><a href="cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
    <form class="navbar-form navbar-left" role="search">
     <div class="form-group">
