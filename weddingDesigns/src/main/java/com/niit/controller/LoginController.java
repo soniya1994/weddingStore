@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.niit.model.Customer;
+import com.niit.service.CustomerServiceDao;
 
+import javax.validation.Valid;
 
 @SuppressWarnings("unused")
 @Controller
@@ -68,11 +71,22 @@ public class LoginController {
 	@RequestMapping(value="/signup",method=RequestMethod.GET)
 	public ModelAndView signup()
 	{
-		System.out.println("-----Signup Controller------");
-		 ModelAndView m = new ModelAndView("signUp");	
+		System.out.println("-----signup Controller------");
+		 ModelAndView m = new ModelAndView("signup");	
 		m.setViewName("signup");
 		return m;
 	}
+	/*@RequestMapping(value="/addCustomer", method=RequestMethod.POST)
+	public String addCustomerdetails(@ModelAttribute("customer")@Valid Customer customer,BindingResult result){
+		
+	
+		 ModelAndView m = new ModelAndView("result");
+		
+		 m.addObject("command", new Customer());
+			return "signUp";
+		
+	}*/
+
 	@RequestMapping(value="/productinfo",method=RequestMethod.GET)
 	public ModelAndView productinfo()
 	{

@@ -151,9 +151,8 @@ li a:hover:not(.active)
     <li><a href="cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
 
-   </ul>	<form:form action="./Register" method="post" enctype="multipart/form-data" class="container">
-	
-   <form:form method="POST" action="./customer">
+   </ul>			<form:form id = "regForm" method = "POST" action = "registration">
+  
    <table>
     
 	<div class="container">
@@ -165,14 +164,13 @@ li a:hover:not(.active)
 	               	</div>
 	            </div> 
 				<div class="main-login main-center">
-					<form class="form-horizontal" method="post" action="#">
-						
+					
 						<div class="form-group">
 							<label for="name" class="cols-sm-8 control-label">Your Name</label>
 							<div class="cols-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+									<form:input type="text" class="form-control" name="name" path="name"  placeholder="Enter your Name"/>
 								</div>
 							</div>
 						</div>
@@ -182,7 +180,7 @@ li a:hover:not(.active)
 							<div class="cols-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+									<form:input type="text" class="form-control" name="email" path="email"  placeholder="Enter your Email"value = "${Customer.youremail}"/>
 								</div>
 							</div>
 						</div>
@@ -192,7 +190,7 @@ li a:hover:not(.active)
 							<div class="cols-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+									<form:input type="text" class="form-control" name="username" path="username"  placeholder="Enter your Username"value = "${Customer.username}"/>
 								</div>
 							</div>
 						</div>
@@ -202,7 +200,7 @@ li a:hover:not(.active)
 							<div class="cols-sm-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+									<form:input type="password" class="form-control" name="password" path="password"  placeholder="Enter your Password"value = "${Customer.password}"/>
 								</div>
 							</div>
 						</div>
@@ -212,18 +210,18 @@ li a:hover:not(.active)
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+									<form:input type="password" class="form-control" name="confirm" path="confirm"  placeholder="Confirm your Password"value = "${Customer.confirmpassword}"/>
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group ">
-							<button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+							<form:button type="button" class="btn btn-primary btn-lg btn-block login-button"path="button"/>Register</button>
 						</div>
 						
-					</form>
+					
 				</div>
-			</div></div></table></form:form></form:form>
+			</div></div></table></form:form>
 </body>
 
 </html>

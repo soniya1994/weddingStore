@@ -10,7 +10,8 @@ import com.niit.dao.CustomerDao;
 import com.niit.model.Customer;
 
 
-@Service
+@Service("customerService")
+@Transactional
 public class CustomerService implements CustomerServiceDao {
 @Autowired
 private CustomerDao customerDao;
