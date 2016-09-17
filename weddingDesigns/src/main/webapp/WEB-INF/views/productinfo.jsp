@@ -175,12 +175,10 @@
    <li><a href="login1">LOGIN</a></li>
    <li><a href="signup">NEW USER</a></li>
 <li class="active"><a href="productinfo">PRODUCT DETAILS</a></li>
-<li><a href="loginadmin">Admin Access Page</a></li>
-
+<li><a href="admininfo">ADMIN PAGE</a></li>
 
     <li><a href="cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-   <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-
+   
    </ul>
   
     <style>
@@ -195,7 +193,7 @@ th {
 }
     </style>
     
-    
+    <form:form>
    <div class  = "divSearch">
 	<input type = "text" placeholder = "Search" id = "serachBar" ng-model = "search" size = "22">
 </div>
@@ -254,6 +252,6 @@ th {
 		};
 	});
 </script>
-   
+   </form:form>
 </body>
 </html>

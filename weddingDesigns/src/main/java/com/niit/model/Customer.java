@@ -1,59 +1,121 @@
 package com.niit.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
-import javax.persistence.*;
-
+import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
+@Table(name="Customer")
 public class Customer {
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-private int id;
-	@Column(name="Username")
-	@NotEmpty(message="Enter Ur Name")
-	private String username;
 	
-	@Column(name="email")
-	@Email(message="Enter Email_id")
+	private int id;
+	@Column
+	@NotEmpty(message="Enter Ur Name")
+	private String name;
+	@Column
+	@Email(message="Enter Valid Email Id")
 	private String email;
-	@Column(name="password")
-	@NotEmpty(message="Enter password")
-	private String password;
-	@Column(name="confirmpassword")
-	@NotEmpty(message="Enter confirmpassword")
-	private String confirmpassword;
+	@Column
+	@NotEmpty(message="Enter Ur Password")
+	private String pwd;
+	@Column
+	private String addr;
+	@Column
+	private long phno;
 	
 	public int getId() {
 		return id;
 	}
+
+	/**
+	 * @param id the id to set
+	 */
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getUsername() {
-		return username;
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
 	}
+
+	/**
+	 * @return the pwd
+	 */
+	public String getPwd() {
+		return pwd;
+	}
+
+	/**
+	 * @param pwd the pwd to set
+	 */
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+
+	/**
+	 * @return the email
+	 */
 	public String getEmail() {
 		return email;
 	}
+
+	/**
+	 * @param email the email to set
+	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPassword() {
-		return password;
+
+	/**
+	 * @return the addr
+	 */
+	public String getAddr() {
+		return addr;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+
+	/**
+	 * @param addr the addr to set
+	 */
+	public void setAddr(String addr) {
+		this.addr = addr;
 	}
-	public String getConfirmpassword() {
-		return confirmpassword;
+
+	/**
+	 * @return the phno
+	 */
+	public long getPhno() {
+		return phno;
 	}
-	public void setConfirmpassword(String confirmpassword) {
-		this.confirmpassword = confirmpassword;
+
+	/**
+	 * @param phno the phno to set
+	 */
+	public void setPhno(long phno) {
+		this.phno = phno;
 	}
+
+	
 	
 	
 }

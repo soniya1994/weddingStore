@@ -1,4 +1,3 @@
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -136,54 +135,8 @@ li a:hover:not(.active)
 
     <ul class="nav nav-pills">
   <li><a href="index">HOME</a></li>
-  <li><a href="product">WEDDING COLLECTION</a></li>
-  <li><a href="aboutus">ABOUT US</a></li>
  
-   <li><a href="login1">LOGIN</a></li>
-   <li class="active"><a href="signup">NEW USER</a></li>
-  <li><a href="productinfo">PRODUCT DETAILS</a></li>
-  <li><a href="admininfo">ADMIN PAGE</a></li>
-  
-    <li><a href="cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-  
-
-   </ul>			<h2>Customer Information</h2>
-<form:form action="./addCustomer" commandName="cust" method="POST">
-<form:errors path="*" cssClass="errorblock" element="div" />
- 
-			<table class="table">
-				<tr>
-					<td><label path="name">Your Name</label></td>
-					<td><input path="name"value="${customer.name}"/> </td>
-					<td><font color="red"><errors path="username"/></font></td>
-				</tr>
-				<tr>
-					<td><label path="email">Email Id </label></td>
-					<td><input path="email"/> </td>
-					<td><font color="red"><errors path="email""${customer.email}"></errors></font></td>
-				</tr>
-				<tr>
-					<td><label path="pwd">Password</label></td>
-					<td><input type='pwd' path="pwd"/> </td>
-					<td><font color="red"><errors path="pwd""${customer.pwd}"/></font></td>
-				</tr>
-				
-				<tr>
-					<td><label path="addr">Your Address</label></td>
-					<td><input path="addr""${customer.addr}"/> </td>
-				</tr>
-				<tr>
-					<td><label path="phno">Your Phno</label></td>
-					<td><input path="phno""${customer.phno}"/> </td>
-				</tr>
-				<tr>
-					<td><input class="btn btn-success" type="submit" value="SubmitDetails" action="/login1" /></td>
-					<td><input class="btn btn-danger" type="reset" value="Clear Data"/></td>
-				</tr>
-			</table>
-		
-		</form:form>
-		
-	
-</body>
+  <li><a href="aboutus">ABOUT US</a></li></ul>
+  <h1>LogOut Successful</h1><% session.invalidate(); %>
+	</body>
 </html>

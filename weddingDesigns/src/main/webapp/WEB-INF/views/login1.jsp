@@ -241,31 +241,23 @@ li a {
    <li class="active"><a href="login1">LOGIN</a></li>
    <li><a href="signup">NEW USER</a></li>
   <li><a href="productinfo">PRODUCT DETAILS</a></li>
-  <li><a href="loginadmin">Admin Access Page</a></li>
+  <li><a href="admininfo">ADMIN PAGE</a></li>
   
     <li><a href="cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-   <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-
    
     </ul>
-   
+   <form:form>
 <body><div class="login-page">
   <div class="form">
     <form class="register-form">
      User Name:<input type="text" placeholder="name"/>
      Password:<input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
-    </form>
-    <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
+     
       <button>login</button>
       <p class="message">Not registered? <a href="signup">Create an account</a></p>
     </form>
   </div>
 </div>
-
+</form:form>
 </body>
 </html>

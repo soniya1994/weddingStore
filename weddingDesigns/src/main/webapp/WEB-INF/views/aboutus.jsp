@@ -12,6 +12,7 @@
   <script src="<spring:url value="resources/js/bootstrap.min.js"/>"></script>
   <!-- Bootstrap Core CSS -->
     <link href="<spring:url value="resources/css/bootstrap.min.css"/>" rel="stylesheet">
+     <script src ="<spring:url value="/resources/js/angular.min.js"/>"></script>
 <!-- Custom CSS -->
    
 </head>
@@ -174,11 +175,10 @@
    <li><a href="login1">LOGIN</a></li>
    <li><a href="signup">NEW USER</a></li>
 <li><a href="productinfo">PRODUCT DETAILS</a></li>
-<li><a href="loginadmin">Admin Access Page</a></li>
+<li><a href="admininfo">ADMIN PAGE</a></li>
 
     <li><a href="cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-   <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-
+   
    </ul>
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">

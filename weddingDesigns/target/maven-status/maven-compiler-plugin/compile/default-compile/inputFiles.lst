@@ -1,10 +1,11 @@
 D:\Mypoject\weddingDesigns\src\main\java\com\niit\controller\LoginController.java
+D:\Mypoject\weddingDesigns\src\main\java\com\niit\controller\RegController.java
 D:\Mypoject\weddingDesigns\src\main\java\com\niit\dao\CustomerDaoImpl.java
 D:\Mypoject\weddingDesigns\src\main\java\com\niit\dao\ProductDao.java
-D:\Mypoject\weddingDesigns\src\main\java\com\niit\service\CustomerServiceDao.java
+D:\Mypoject\weddingDesigns\src\main\java\com\niit\service\CustServiceImpl.java
 D:\Mypoject\weddingDesigns\src\main\java\com\niit\model\Customer.java
 D:\Mypoject\weddingDesigns\src\main\java\com\niit\dao\ProductDaoImpl.java
 D:\Mypoject\weddingDesigns\src\main\java\com\niit\model\Supplier.java
 D:\Mypoject\weddingDesigns\src\main\java\com\niit\dao\CustomerDao.java
-D:\Mypoject\weddingDesigns\src\main\java\com\niit\service\CustomerService.java
+D:\Mypoject\weddingDesigns\src\main\java\com\niit\service\CustService.java
 D:\Mypoject\weddingDesigns\src\main\java\com\niit\model\Product.java

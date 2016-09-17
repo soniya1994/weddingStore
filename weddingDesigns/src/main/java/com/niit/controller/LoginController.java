@@ -10,16 +10,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.model.Customer;
-import com.niit.service.CustomerServiceDao;
+import com.niit.service.CustService;
 
 import javax.validation.Valid;
 
 @SuppressWarnings("unused")
 @Controller
 
-public class LoginController { 
+public class LoginController {
+	ModelAndView m = new ModelAndView();
 	@Autowired
-	
+	CustService cobj;
 	
 	
 	@RequestMapping(value="/",method=RequestMethod.GET)
@@ -33,7 +34,7 @@ public class LoginController {
 	}
 	
 	
-	@RequestMapping(value="/aboutus",method=RequestMethod.GET)
+	@RequestMapping("/aboutus")
 	public ModelAndView aboutus()
 	{
 		System.out.println("-----about Controller------");
@@ -42,7 +43,7 @@ public class LoginController {
 		return m;
 	}
 	
-	@RequestMapping(value="/product",method=RequestMethod.GET)
+	@RequestMapping("/product")
 	public ModelAndView product()
 	{
 		System.out.println("-----allproducts Controller------");
@@ -52,7 +53,7 @@ public class LoginController {
 	}
 	
 	
-	@RequestMapping(value="/cart",method=RequestMethod.GET)
+	@RequestMapping("/cart")
 	public ModelAndView cart()
 	{
 		System.out.println("-----contact Controller------");
@@ -60,7 +61,7 @@ public class LoginController {
 		m.setViewName("cart");
 		return m;
 	}
-	@RequestMapping(value="/login1",method=RequestMethod.GET)
+	@RequestMapping("/login1")
 	public ModelAndView login1()
 	{
 		System.out.println("-----loginpage Controller------");
@@ -76,16 +77,26 @@ public class LoginController {
 		m.setViewName("signup");
 		return m;
 	}
-	/*@RequestMapping(value="/addCustomer", method=RequestMethod.POST)
-	public String addCustomerdetails(@ModelAttribute("customer")@Valid Customer customer,BindingResult result){
+	@RequestMapping(value="/addCustomer", method=RequestMethod.POST)
+	public String addCustomerdetails(@ModelAttribute("cust")@Valid Customer cust,BindingResult result){
 		
-	
-		 ModelAndView m = new ModelAndView("result");
-		
-		 m.addObject("command", new Customer());
+		try{
+		cobj.saveOrUpdate(cust);
+		} catch (Exception e) {
+
+		}
+		// ModelAndView m = new ModelAndView("result");
+		if (result.hasErrors()) {
+			// m.addObject("command", new Customer());
 			return "signUp";
-		
-	}*/
+		}
+
+		else
+
+			return "login";
+	}
+
+	
 
 	@RequestMapping(value="/productinfo",method=RequestMethod.GET)
 	public ModelAndView productinfo()
@@ -95,19 +106,19 @@ public class LoginController {
 		m.setViewName("productinfo");
 		return m;
 	}
-	 @RequestMapping(value="/loginadmin", method=RequestMethod.GET)
-	 public ModelAndView loginadmin()
+	 @RequestMapping(value="/admininfo", method=RequestMethod.GET)
+	 public ModelAndView admininfo()
 		{
-	 System.out.println("-----loginadmin------");
-	 ModelAndView m = new ModelAndView("loginadmin");	
-	m.setViewName("loginadmin");
+	 System.out.println("-----admininfo------");
+	 ModelAndView m = new ModelAndView("admininfo");	
+	m.setViewName("admininfo");
 	return m;
 		       
-		    }
+		    
 		}
 
 	
-	
+}
 	
 	
 	

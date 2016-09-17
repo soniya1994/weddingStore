@@ -1,4 +1,5 @@
 <html>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -9,7 +10,8 @@
   <link rel="stylesheet" href="<spring:url value="resources/css/bootstrap.min.css"/>">
   <script src="<spring:url value="resources/js/jquery.min.js"/>"></script>
   <script src="<spring:url value="resources/js/bootstrap.min.js"/>"></script>
-</head>
+ <script src ="<spring:url value="/resources/js/angular.min.js"/>"></script>
+ </head>
   <style>
   body{
   
@@ -168,7 +170,7 @@ h1{
    <li><a href="login1">LOGIN</a></li>
    <li><a href="signup">NEW USER</a></li>
    <li><a href="productinfo">PRODUCT DETAILS</a></li>
-   <li><a href="loginadmin">Admin Access Page</a></li>
+   <li><a href="admininfo">ADMIN PAGE</a></li>
    
     <li><a href="cart"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
    <form class="navbar-form navbar-left" role="search">
